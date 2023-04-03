@@ -37,7 +37,7 @@ Modules tb( clk, reset, sel_module,red, green, blue,     // input signlas
                      
 //Enter the read path here
 `define read_fileName "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\FPGA\\bmp\\bmp_road.bmp"
- localparam ARRAY_LEN = 500*1024;
+ localparam ARRAY_LEN = 1000*1024;
  
  reg[7:0] data[0: ARRAY_LEN];
  integer size, start_pos, width, height, bitcount;
@@ -125,7 +125,7 @@ Modules tb( clk, reset, sel_module,red, green, blue,     // input signlas
 //Image Write Start
  
  //Enter the write path here
- `define write_filename "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\FPGA\\bmp\\output\\output_gray.bmp"
+ `define write_filename "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\FPGA\\bmp\\output\\output_gray5000.bmp"
  
 task writeBMP;
 integer fileID, k;

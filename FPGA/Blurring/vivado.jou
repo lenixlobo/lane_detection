@@ -18,3 +18,7 @@ launch_simulation
 launch_simulation
 source blur_tb.tcl
 run all
+run all
+close_sim
+launch_simulation
+source blur_tb.tcl
