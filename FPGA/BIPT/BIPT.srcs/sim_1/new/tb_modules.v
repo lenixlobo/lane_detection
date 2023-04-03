@@ -36,7 +36,7 @@ Modules tb( clk, reset, sel_module,red, green, blue,     // input signlas
                      
                      
 //Enter the read path here
-`define read_fileName "D:\\xixi\\Image-Processing-master\\Image-Processing-master\\bmp\\bmp_road.bmp"
+`define read_fileName "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\FPGA\\bmp\\bmp_road.bmp"
  localparam ARRAY_LEN = 500*1024;
  
  reg[7:0] data[0: ARRAY_LEN];
@@ -125,7 +125,7 @@ Modules tb( clk, reset, sel_module,red, green, blue,     // input signlas
 //Image Write Start
  
  //Enter the write path here
- `define write_filename "D:\\xixi\\Image-Processing-master\\Image-Processing-master\\bmp\\output\\output.bmp"
+ `define write_filename "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\FPGA\\bmp\\output\\output_gray.bmp"
  
 task writeBMP;
 integer fileID, k;
@@ -157,7 +157,7 @@ initial begin
     done_in = 0;
     //Select the filter to be computed here
     //The computation is defined in Modules.v
-    sel_module = 3'b111;
+    sel_module = 3'b000;
     val = 50;
     
     red = 8'd0;
