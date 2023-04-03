@@ -1,24 +1,4 @@
-`timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 30.10.2018 20:39:49
-// Design Name: 
-// Module Name: tb_modules
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
+`timescale 1ns / 1ps // 
 
 module tb_modules();
 
@@ -125,7 +105,7 @@ Modules tb( clk, reset, sel_module,red, green, blue,     // input signlas
 //Image Write Start
  
  //Enter the write path here
- `define write_filename "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\FPGA\\bmp\\output\\output_gray5000.bmp"
+ `define write_filename "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\FPGA\\bmp\\output\\output_gray.bmp"
  
 task writeBMP;
 integer fileID, k;

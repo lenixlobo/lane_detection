@@ -2,23 +2,60 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Mon Apr  3 15:17:44 2023
-# Process ID: 12932
+# Start of session at: Mon Apr  3 19:32:15 2023
+# Process ID: 12308
 # Current directory: C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11520 C:\Users\Admin\OneDrive\Documents\GithubRepos\lane_detection\FPGA\Blurring\Blurring.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6640 C:\Users\Admin\OneDrive\Documents\GithubRepos\lane_detection\FPGA\Blurring\Blurring.xpr
 # Log file: C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/vivado.log
 # Journal file: C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring\vivado.jou
 # Running On: DESKTOP-HAE7TCE, OS: Windows, CPU Frequency: 1800 MHz, CPU Physical cores: 4, Host memory: 8440 MB
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.xpr
-upgrade_project -migrate_output_products
 update_compile_order -fileset sources_1
 launch_simulation
-launch_simulation
 source blur_tb.tcl
-run all
 run all
 close_sim
 launch_simulation
 source blur_tb.tcl
+run all
+close_sim
+launch_simulation
+source blur_tb.tcl
+run all
+close_sim
+launch_simulation
+source blur_tb.tcl
+run all
+close_sim
+launch_simulation
+source blur_tb.tcl
+close_sim
+launch_simulation
+source blur_tb.tcl
+run all
+close_sim
+launch_simulation
+source blur_tb.tcl
+run all
+close_sim
+launch_simulation
+source blur_tb.tcl
+run all
+close_sim
+launch_simulation
+source blur_tb.tcl
+run all
+close_sim
+launch_simulation
+source blur_tb.tcl
+run all
+close_sim
+launch_simulation
+source blur_tb.tcl
+run all
+close_sim
+launch_simulation
+source blur_tb.tcl
+run all

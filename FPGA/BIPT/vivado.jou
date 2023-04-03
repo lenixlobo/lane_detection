@@ -21,3 +21,12 @@ close_sim
 launch_simulation
 source tb_modules.tcl
 run all
+close_sim
+launch_simulation
+source tb_modules.tcl
+run all
+close_sim
+launch_simulation
+source tb_modules.tcl
+run all
+close_sim

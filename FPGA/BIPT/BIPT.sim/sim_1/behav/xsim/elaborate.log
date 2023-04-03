@@ -10,6 +10,6 @@ Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.Modules
 Compiling module xil_defaultlib.tb_modules
-WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/BIPT/BIPT.srcs/sim_1/new/tb_modules.v" Line 57. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/BIPT/BIPT.srcs/sim_1/new/tb_modules.v" Line 37. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot tb_modules_behav

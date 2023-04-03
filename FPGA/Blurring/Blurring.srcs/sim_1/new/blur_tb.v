@@ -34,10 +34,12 @@ module blur_tb();
  reg[7:0] red7, green7, blue7;
  reg[7:0] red8, green8, blue8;
  reg[7:0] red9, green9, blue9;
+ reg[7:0] red10, green10, blue10;
+ 
  wire done_out;
  wire[7:0] red_o, green_o, blue_o;
 
-blur tb( clk, reset, sel_module,red1, green1, blue1,red2, green2, blue2,red3, green3, blue3,red4, green4, blue4,red5, green5, blue5,red6, green6, blue6,red7, green7, blue7,red8, green8, blue8, red9, green9, blue9,     // input signlas
+blur tb( clk, reset, sel_module,red1, green1, blue1,red2, green2, blue2,red3, green3, blue3,red4, green4, blue4,red5, green5, blue5,red6, green6, blue6,red7, green7, blue7,red8, green8, blue8, red9, green9, blue9, red10, green10, blue10,     // input signlas
                      done_in, done_out,       // output signals for tgb2gray
                 //     val,                           // brightness values
                      red_o, green_o, blue_o);
@@ -52,8 +54,9 @@ blur tb( clk, reset, sel_module,red1, green1, blue1,red2, green2, blue2,red3, gr
 `define read_fileName7 "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\FPGA\\bmp\\leftdown.bmp"
 `define read_fileName8 "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\FPGA\\bmp\\rightup.bmp"
 `define read_fileName9 "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\FPGA\\bmp\\rightdown.bmp"
+`define read_filename10 "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\FPGA\\bmp\\output\\road_sobel_test.bmp"
 
- localparam ARRAY_LEN = 500*1024;
+ localparam ARRAY_LEN = 1000*1024;
  
  reg[7:0] data1[0: ARRAY_LEN];
  reg[7:0] data2[0: ARRAY_LEN];
@@ -63,14 +66,15 @@ blur tb( clk, reset, sel_module,red1, green1, blue1,red2, green2, blue2,red3, gr
  reg[7:0] data6[0: ARRAY_LEN];
  reg[7:0] data7[0: ARRAY_LEN];
  reg[7:0] data8[0: ARRAY_LEN];
- reg[7:0] data9[0: ARRAY_LEN]; 
+ reg[7:0] data9[0: ARRAY_LEN];
+ reg[7:0] data10[0:ARRAY_LEN]; 
  
  integer size, start_pos, width, height, bitcount;
  
  
  
  task readBMP;
-     integer fileID1, fileID2, fileID3, fileID4, fileID5, fileID6, fileID7, fileID8, fileID9;
+     integer fileID1, fileID2, fileID3, fileID4, fileID5, fileID6, fileID7, fileID8, fileID9, fileID10;
  //    integer i;
      begin
          fileID1 = $fopen(`read_fileName1, "rb");
@@ -82,6 +86,7 @@ blur tb( clk, reset, sel_module,red1, green1, blue1,red2, green2, blue2,red3, gr
          fileID7 = $fopen(`read_fileName7, "rb");
          fileID8 = $fopen(`read_fileName8, "rb");
          fileID9 = $fopen(`read_fileName9, "rb");
+         fileID10 = $fopen(`read_filename10, "rb");
          $display("%d", fileID1);
          if(fileID1 == 0) begin
              $display("Error: Please check file path");
@@ -113,6 +118,9 @@ blur tb( clk, reset, sel_module,red1, green1, blue1,red2, green2, blue2,red3, gr
                                        
              $fread(data9, fileID9);
              $fclose(fileID9);
+             
+             $fread(data10, fileID10);
+             $fclose(fileID10);
                                                     
                                                     
              size = {data1[5],data1[4],data1[3],data1[2]};
@@ -184,7 +192,7 @@ blur tb( clk, reset, sel_module,red1, green1, blue1,red2, green2, blue2,red3, gr
  
 //Image Write Start
  
- `define write_filename "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\FPGA\\bmp\\output\\road_sobel_test.bmp"
+ `define write_filename "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\FPGA\\bmp\\output\\road_sobel_testbinary.bmp"
  
 task writeBMP;
 integer fileID, k;
@@ -236,7 +244,7 @@ initial begin
     clk = 1;
     reset = 1;
     done_in = 0;
-    sel_module = 3'b001;
+    sel_module = 3'b111;
     val = 50;
     
     red1 = 8'd0;
@@ -285,6 +293,12 @@ initial begin
         red9 = data9[i+2];
         green9 = data9[i+1];
         blue9 = data9[i];
+        
+        
+        red10 = data10[i+2];
+        green10 = data10[i+1];
+        blue10 = data10[i];
+        
         
         #10;
         done_in = 1;

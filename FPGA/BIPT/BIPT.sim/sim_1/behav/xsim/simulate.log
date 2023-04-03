@@ -1,0 +1,9 @@
+Time resolution is 1 ps
+     -20000
+WARNING: Insufficient data from the input file for $fread
+size -      624054
+startpos :          54
+width -         520; height -         400
+Result.bmp is generated 
+
+$stop called at time : 2080040 ns : File "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/BIPT/BIPT.srcs/sim_1/new/tb_modules.v" Line 169

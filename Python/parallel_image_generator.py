@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import numpy as np
 import cv2
-img = cv2.imread("bmp_gray.bmp")
+img = cv2.imread("output_gray.bmp")
 
 #cv2.imwrite("gray.bmp", img)
 

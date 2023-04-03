@@ -26,6 +26,7 @@
 // 010 - edge detection using kernel
 // 011 - motion blur
 // 100 - emboss
+// 111 - binarize
 
 //1 = original 	(2, 2)
 //2 = left 		(2, 3)
@@ -43,7 +44,7 @@
 //| 9 5 7 |
 
 
-module blur(clk, reset, sel_module,red1, green1, blue1,red2, green2, blue2,red3, green3, blue3,red4, green4, blue4,red5, green5, blue5,red6, green6, blue6,red7, green7, blue7,red8, green8, blue8, red9, green9, blue9,     // input signlas
+module blur(clk, reset, sel_module,red1, green1, blue1,red2, green2, blue2,red3, green3, blue3,red4, green4, blue4,red5, green5, blue5,red6, green6, blue6,red7, green7, blue7,red8, green8, blue8, red9, green9, blue9, red10, green10, blue10,     // input signlas
                      done_in, done_out,       // output signals for tgb2gray
                     // val,                           // brightness values
                      red_o, green_o, blue_o);
@@ -60,6 +61,8 @@ module blur(clk, reset, sel_module,red1, green1, blue1,red2, green2, blue2,red3,
  input[7:0] red7, green7, blue7;
  input[7:0] red8, green8, blue8;
  input[7:0] red9, green9, blue9;
+ input[7:0] red10, green10, blue10;
+ 
  output reg done_out;
  output reg[7:0] red_o, green_o, blue_o;
   reg[31:0] red_x, green_x, blue_x;
@@ -92,6 +95,7 @@ module blur(clk, reset, sel_module,red1, green1, blue1,red2, green2, blue2,red3,
                 done_out <= 0;
             end
         end
+        
 //        sobel edge detection
      
 //        | 1 0 -1 |           | 1 2 1 |
@@ -137,6 +141,31 @@ module blur(clk, reset, sel_module,red1, green1, blue1,red2, green2, blue2,red3,
                     green_o <= 0;
                     done_out <= 0;
                 end
+         end
+         
+         
+         
+         
+    end else if(sel_module == 3'b111) begin
+         if(reset) begin
+             red_o <= 0;
+             green_o <= 0;
+             blue_o <= 0;
+             done_out <= 0;
+         end else begin
+             if(done_in == 1)begin                  
+                //red_x = (red_x > 30) ? 255 : 0;
+                red_x = (red10>70) ? 255 : 0;
+                red_o <= red_x;
+                green_o <= red_x;
+                blue_o <= red_x;
+                done_out <= 1;
+             end else begin
+                 red_o <= 0;
+                 blue_o <= 0;
+                 green_o <= 0;
+                 done_out <= 0;
+             end
          end
     end else if(sel_module == 3'b010) begin
          if(reset) begin
