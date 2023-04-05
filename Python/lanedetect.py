@@ -24,7 +24,7 @@ START_TIME = time.time()
 
 # GLOBAL VARIBALES
 
-FILENAME = "road4.jpg"
+FILENAME = "roads/road_1.jpg"
 H_WINDOW = 1
 DIALATION_KERNEL_SIZE = 3
 
@@ -68,7 +68,7 @@ ret, img_thresh = cv2.threshold(img_sobel, 20, 255, cv2.THRESH_BINARY)
 # Taking a matrix of size DIALATION_KERNEL_SIZE as the kernel 
 kernel = np.ones((DIALATION_KERNEL_SIZE,DIALATION_KERNEL_SIZE), np.uint8) 
 img_dilation = cv2.dilate(img_thresh, kernel, iterations=1)
-
+#img_dilation = img_thresh
 
 # HOUGH TRANSFORM
 middle_div = int(width/2)

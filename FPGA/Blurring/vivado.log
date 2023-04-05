@@ -1253,3 +1253,7 @@ Result.bmp is generated
 
 $stop called at time : 2080040 ns : File "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 315
 run: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1226.156 ; gain = 1.531
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Apr  3 20:18:11 2023...
