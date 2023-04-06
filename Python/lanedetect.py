@@ -24,7 +24,7 @@ START_TIME = time.time()
 
 # GLOBAL VARIBALES
 
-FILENAME = "roads/road_1.jpg"
+FILENAME = "roads/road_10.bmp"
 H_WINDOW = 1
 DIALATION_KERNEL_SIZE = 3
 

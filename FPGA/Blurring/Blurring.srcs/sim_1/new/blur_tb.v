@@ -54,7 +54,7 @@ blur tb( clk, reset, sel_module,red1, green1, blue1,red2, green2, blue2,red3, gr
 `define read_fileName7 "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\FPGA\\bmp\\leftdown.bmp"
 `define read_fileName8 "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\FPGA\\bmp\\rightup.bmp"
 `define read_fileName9 "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\FPGA\\bmp\\rightdown.bmp"
-`define read_filename10 "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\FPGA\\bmp\\output\\road_sobel_test.bmp"
+`define read_filename10 "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\FPGA\\bmp\\output\\road_sobel.bmp"
 
  localparam ARRAY_LEN = 1000*1024;
  
@@ -192,7 +192,7 @@ blur tb( clk, reset, sel_module,red1, green1, blue1,red2, green2, blue2,red3, gr
  
 //Image Write Start
  
- `define write_filename "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\FPGA\\bmp\\output\\road_sobel_testbinary.bmp"
+ `define write_filename "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\FPGA\\bmp\\output\\road_sobel_binarization.bmp"
  
 task writeBMP;
 integer fileID, k;
