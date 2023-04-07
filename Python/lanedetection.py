@@ -25,8 +25,6 @@ class ImageHandler:
     # select_image : Asks user for the bmp image of choice, and displays it on a window
     # Once a image is loaded, a button called "Generate parallel images" is instantiated.
     def select_image(self):
-        if(self.filename):
-            reset()
         filetypes = [('Image files', '.bmp')]
         self.filename = fd.askopenfilename(filetypes=filetypes, title='Open image')
         self.image = cv2.imread(self.filename)
@@ -34,14 +32,7 @@ class ImageHandler:
         tkimg = ImageTk.PhotoImage(Image.fromarray(cv2.cvtColor(self.image, cv2.COLOR_BGR2RGB)))
         self.imagelabel.image = tkimg
         self.imagelabel.configure(image = tkimg)
-        #Create a button to generate parallel images for Sobel
-        parallelprocess = ttk.Button(root, text='Generate parallel images', command = imghandler.generate_parallel_values)
-        parallelprocess.pack(expand=True)
-
-        #Do Hough transform here
-        houghbutton = ttk.Button(root, text='Detect Lines', command=imghandler.detectlines)
-        houghbutton.pack()
-    
+        
     #Generates and store gray colored pixel shifted images in parallel_images/
     #These images are used by the Vivado project
     def generate_parallel_values(self):
@@ -55,6 +46,9 @@ class ImageHandler:
     
     #Calls the opencv pipeline which implements the Hough transform logic
     def detectlines(self):
+        if(self.image is None):
+            messagebox.showinfo('Error', 'Select image first')
+            return
         print("Filename : " + self.filename)
         ld.dolinedetection(self.filename)
 
@@ -67,10 +61,18 @@ class ImageHandler:
 imghandler = ImageHandler()
 #Create a button to Open Image
 openbutton = ttk.Button(root, text='Open Image', command=imghandler.select_image)
-openbutton.pack(expand=True)
+openbutton.place(x=0, y=0)
+
+#Create a button to generate parallel images for Sobel
+parallelprocess = ttk.Button(root, text='Generate parallel images', command = imghandler.generate_parallel_values)
+parallelprocess.place(x=235, y=470)
+
+#Do Hough transform here
+houghbutton = ttk.Button(root, text='Detect Lines', command=imghandler.detectlines)
+houghbutton.place(x=255, y=500)
 
 #Create a close button to Close the window
 closebutton = ttk.Button(root, text='Close Window', command=root.quit)
-closebutton.pack()
+closebutton.place(x=510, y=0)
 
 root.mainloop()
