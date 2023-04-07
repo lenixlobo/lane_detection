@@ -45,15 +45,15 @@ blur tb( clk, reset, sel_module,red1, green1, blue1,red2, green2, blue2,red3, gr
                      red_o, green_o, blue_o);
                      
                      
-`define read_fileName1 "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\FPGA\\bmp\\bmp_gray.bmp"
-`define read_fileName2 "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\FPGA\\bmp\\left.bmp"
-`define read_fileName3 "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\FPGA\\bmp\\right.bmp"
-`define read_fileName4 "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\FPGA\\bmp\\up.bmp"
-`define read_fileName5 "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\FPGA\\bmp\\down.bmp"
-`define read_fileName6 "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\FPGA\\bmp\\leftup.bmp"
-`define read_fileName7 "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\FPGA\\bmp\\leftdown.bmp"
-`define read_fileName8 "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\FPGA\\bmp\\rightup.bmp"
-`define read_fileName9 "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\FPGA\\bmp\\rightdown.bmp"
+`define read_fileName1 "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\Python\\parallel_images\\road_gray.bmp"
+`define read_fileName2 "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\Python\\parallel_images\\left.bmp"
+`define read_fileName3 "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\Python\\parallel_images\\right.bmp"
+`define read_fileName4 "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\Python\\parallel_images\\up.bmp"
+`define read_fileName5 "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\Python\\parallel_images\\down.bmp"
+`define read_fileName6 "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\Python\\parallel_images\\leftup.bmp"
+`define read_fileName7 "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\Python\\parallel_images\\leftdown.bmp"
+`define read_fileName8 "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\Python\\parallel_images\\rightup.bmp"
+`define read_fileName9 "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\Python\\parallel_images\\rightdown.bmp"
 `define read_filename10 "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\FPGA\\bmp\\output\\road_sobel.bmp"
 
  localparam ARRAY_LEN = 1000*1024;
@@ -192,7 +192,7 @@ blur tb( clk, reset, sel_module,red1, green1, blue1,red2, green2, blue2,red3, gr
  
 //Image Write Start
  
- `define write_filename "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\FPGA\\bmp\\output\\road_sobel_binarization.bmp"
+ `define write_filename "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\FPGA\\bmp\\output\\road_sobel_binarized.bmp"
  
 task writeBMP;
 integer fileID, k;

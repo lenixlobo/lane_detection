@@ -2,10 +2,10 @@
 # Vivado v2022.2 (64-bit)
 # SW Build 3671981 on Fri Oct 14 05:00:03 MDT 2022
 # IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
-# Start of session at: Thu Apr  6 22:33:13 2023
-# Process ID: 7556
+# Start of session at: Fri Apr  7 15:21:30 2023
+# Process ID: 13504
 # Current directory: C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2924 C:\Users\Admin\OneDrive\Documents\GithubRepos\lane_detection\FPGA\Blurring\Blurring.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16824 C:\Users\Admin\OneDrive\Documents\GithubRepos\lane_detection\FPGA\Blurring\Blurring.xpr
 # Log file: C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/vivado.log
 # Journal file: C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring\vivado.jou
 # Running On: DESKTOP-HAE7TCE, OS: Windows, CPU Frequency: 1800 MHz, CPU Physical cores: 4, Host memory: 8440 MB
@@ -65,7 +65,7 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2022.2/data/ip'.
-open_project: Time (s): cpu = 00:00:33 ; elapsed = 00:00:34 . Memory (MB): peak = 1096.789 ; gain = 344.387
+open_project: Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 1079.551 ; gain = 319.441
 update_compile_order -fileset sources_1
 launch_simulation
 Command: launch_simulation 
@@ -85,7 +85,8 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Admin/OneDrive/Documents/G
 INFO: [VRFC 10-311] analyzing module blur
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module blur_tb
-INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:13 . Memory (MB): peak = 1121.789 ; gain = 0.000
+INFO: [USF-XSim-69] 'compile' step finished in '14' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.sim/sim_1/behav/xsim'
 "xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot blur_tb_behav xil_defaultlib.blur_tb xil_defaultlib.glbl -log elaborate.log"
@@ -113,8 +114,8 @@ WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_dete
 WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 122. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot blur_tb_behav
-run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:11 . Memory (MB): peak = 1185.594 ; gain = 0.000
-INFO: [USF-XSim-69] 'elaborate' step finished in '11' seconds
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:17 . Memory (MB): peak = 1121.789 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '17' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.sim/sim_1/behav/xsim'
 INFO: [USF-XSim-98] *** Running xsim
@@ -144,7 +145,6 @@ WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data10" to the wave window
 WARNING: Simulation object /blur_tb/result was not traceable in the design for the following reason:
 Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
 # run 1000ns
-WARNING: file C:\Users\Admin\OneDrive\Documents\GithubRepos\lane_detection\FPGA\bmp\output\road_sobel_test.bmp could not be opened
      -20000
 WARNING: Insufficient data from the input file for $fread
 WARNING: Insufficient data from the input file for $fread
@@ -155,18 +155,14 @@ WARNING: Insufficient data from the input file for $fread
 WARNING: Insufficient data from the input file for $fread
 WARNING: Insufficient data from the input file for $fread
 WARNING: Insufficient data from the input file for $fread
-ERROR: File descriptor (0) passed to $fread is not valid. Please compile the design with -debug for source location information.
-size -      360054
+WARNING: Insufficient data from the input file for $fread
+size -      129654
 startpos :          54
-width -         400; height -         300
+width -         240; height -         180
+xsim: Time (s): cpu = 00:00:12 ; elapsed = 00:00:09 . Memory (MB): peak = 1138.977 ; gain = 17.188
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'blur_tb_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:10 ; elapsed = 00:00:21 . Memory (MB): peak = 1185.594 ; gain = 0.000
-run all
-Result.bmp is generated 
-
-$stop called at time : 1200040 ns : File "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 315
-run: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1185.594 ; gain = 0.000
+launch_simulation: Time (s): cpu = 00:00:16 ; elapsed = 00:00:44 . Memory (MB): peak = 1138.977 ; gain = 17.188
 close_sim
 INFO: [Simtcl 6-16] Simulation closed
 launch_simulation
@@ -188,6 +184,333 @@ INFO: [VRFC 10-311] analyzing module blur
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module blur_tb
 INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot blur_tb_behav xil_defaultlib.blur_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot blur_tb_behav xil_defaultlib.blur_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.blur
+Compiling module xil_defaultlib.blur_tb
+WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 95. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 98. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 101. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 104. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 107. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 110. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 113. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 116. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 119. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 122. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot blur_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "blur_tb_behav -key {Behavioral:sim_1:Functional:blur_tb} -tclbatch {blur_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source blur_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data1" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data2" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data3" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data4" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data5" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data6" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data7" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data8" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data9" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data10" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: Simulation object /blur_tb/result was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+# run 1000ns
+     -20000
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+size -      129654
+startpos :          54
+width -         240; height -         180
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'blur_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1149.027 ; gain = 8.516
+run all
+Result.bmp is generated 
+
+$stop called at time : 432040 ns : File "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 315
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'blur_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'blur_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj blur_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sources_1/new/blur.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blur
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blur_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot blur_tb_behav xil_defaultlib.blur_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot blur_tb_behav xil_defaultlib.blur_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.blur
+Compiling module xil_defaultlib.blur_tb
+WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 95. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 98. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 101. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 104. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 107. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 110. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 113. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 116. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 119. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 122. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot blur_tb_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1164.582 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "blur_tb_behav -key {Behavioral:sim_1:Functional:blur_tb} -tclbatch {blur_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source blur_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data1" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data2" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data3" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data4" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data5" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data6" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data7" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data8" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data9" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data10" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: Simulation object /blur_tb/result was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+# run 1000ns
+     -20000
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+size -      129654
+startpos :          54
+width -         240; height -         180
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'blur_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 1171.793 ; gain = 7.211
+run all
+Result.bmp is generated 
+
+$stop called at time : 432040 ns : File "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 315
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'blur_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'blur_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj blur_tb_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot blur_tb_behav xil_defaultlib.blur_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot blur_tb_behav xil_defaultlib.blur_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "blur_tb_behav -key {Behavioral:sim_1:Functional:blur_tb} -tclbatch {blur_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source blur_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data1" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data2" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data3" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data4" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data5" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data6" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data7" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data8" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data9" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data10" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: Simulation object /blur_tb/result was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+# run 1000ns
+     -20000
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+size -      129654
+startpos :          54
+width -         240; height -         180
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'blur_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 1171.793 ; gain = 0.000
+run all
+Result.bmp is generated 
+
+$stop called at time : 432040 ns : File "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 315
+relaunch_sim
+Command: launch_simulation -step compile -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'blur_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'blur_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj blur_tb_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -step elaborate -simset sim_1 -mode behavioral
+INFO: [Vivado 12-12493] Simulation top is 'blur_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot blur_tb_behav xil_defaultlib.blur_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot blur_tb_behav xil_defaultlib.blur_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Time resolution is 1 ps
+     -20000
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+size -      129654
+startpos :          54
+width -         240; height -         180
+relaunch_sim: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1171.793 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'blur_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'blur_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj blur_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sources_1/new/blur.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blur
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blur_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.sim/sim_1/behav/xsim'
 "xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot blur_tb_behav xil_defaultlib.blur_tb xil_defaultlib.glbl -log elaborate.log"
@@ -256,14 +579,222 @@ WARNING: Insufficient data from the input file for $fread
 WARNING: Insufficient data from the input file for $fread
 WARNING: Insufficient data from the input file for $fread
 WARNING: Insufficient data from the input file for $fread
-size -      360054
+size -      852346
 startpos :          54
-width -         400; height -         300
+width -         665; height -         427
+width is not suitable
+$finish called at time : 0 fs : File "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 142
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'blur_tb_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:08 . Memory (MB): peak = 1185.594 ; gain = 0.000
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1171.793 ; gain = 0.000
 run all
 Result.bmp is generated 
 
-$stop called at time : 1200040 ns : File "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 315
-run: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1185.594 ; gain = 0.000
+$stop called at time : 2841020 ns : File "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 315
+run: Time (s): cpu = 00:00:16 ; elapsed = 00:00:20 . Memory (MB): peak = 1171.793 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'blur_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'blur_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj blur_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sources_1/new/blur.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blur
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blur_tb
+INFO: [USF-XSim-69] 'compile' step finished in '4' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot blur_tb_behav xil_defaultlib.blur_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot blur_tb_behav xil_defaultlib.blur_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.blur
+Compiling module xil_defaultlib.blur_tb
+WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 95. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 98. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 101. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 104. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 107. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 110. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 113. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 116. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 119. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 122. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot blur_tb_behav
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:08 . Memory (MB): peak = 1171.793 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '8' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "blur_tb_behav -key {Behavioral:sim_1:Functional:blur_tb} -tclbatch {blur_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source blur_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data1" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data2" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data3" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data4" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data5" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data6" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data7" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data8" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data9" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data10" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: Simulation object /blur_tb/result was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+# run 1000ns
+     -20000
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+size -      852346
+startpos :          54
+width -         665; height -         427
+width is not suitable
+$finish called at time : 0 fs : File "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 142
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'blur_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:15 . Memory (MB): peak = 1171.793 ; gain = 0.000
+run all
+Result.bmp is generated 
+
+$stop called at time : 2841020 ns : File "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 315
+run: Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1171.793 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'blur_tb'
+WARNING: [Vivado 12-13340] Unable to auto find GCC executables from simulator install path! (path not set)
+WARNING: [Vivado 12-13277] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2022.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'blur_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.sim/sim_1/behav/xsim'
+"xvlog --incr --relax -prj blur_tb_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sources_1/new/blur.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blur
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module blur_tb
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.sim/sim_1/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot blur_tb_behav xil_defaultlib.blur_tb xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2022.2
+Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot blur_tb_behav xil_defaultlib.blur_tb xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.blur
+Compiling module xil_defaultlib.blur_tb
+WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 95. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 98. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 101. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 104. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 107. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 110. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 113. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 116. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 119. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 122. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot blur_tb_behav
+run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1171.793 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "blur_tb_behav -key {Behavioral:sim_1:Functional:blur_tb} -tclbatch {blur_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source blur_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data1" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data2" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data3" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data4" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data5" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data6" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data7" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data8" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data9" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: [Wavedata 42-489] Can't add object "/blur_tb/data10" to the wave window because it has 8192008 bits, which exceeds the display limit of 65536 bits.  To change the display limit, use the command "set_property display_limit <new limit> [current_wave_config]".
+WARNING: Simulation object /blur_tb/result was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+# run 1000ns
+     -20000
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+WARNING: Insufficient data from the input file for $fread
+size -      852346
+startpos :          54
+width -         665; height -         427
+width is not suitable
+$finish called at time : 0 fs : File "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 142
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'blur_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:12 . Memory (MB): peak = 1171.793 ; gain = 0.000
+run all
+Result.bmp is generated 
+
+$stop called at time : 2841020 ns : File "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 315
+run: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1171.793 ; gain = 0.000
