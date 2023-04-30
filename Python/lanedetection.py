@@ -29,7 +29,7 @@ class ImageHandler:
         self.filename = fd.askopenfilename(filetypes=filetypes, title='Open image')
         self.image = cv2.imread(self.filename)
         #Display the Opened image
-        tkimg = ImageTk.PhotoImage(Image.fromarray(cv2.cvtColor(self.image, cv2.COLOR_BGR2RGB)))
+        tkimg = ImageTk.PhotoImage(Image.fromarray(cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)))
         self.imagelabel.image = tkimg
         self.imagelabel.configure(image = tkimg)
         
@@ -40,7 +40,6 @@ class ImageHandler:
             messagebox.showinfo('Error', 'Select image first')
             return
         image_gray = cv2.cvtColor(self.image, cv2.COLOR_BGR2GRAY)
-        image_gray = cv2.cvtColor(image_gray, cv2.COLOR_GRAY2BGR)
         pig.generate_parallel_images(np.array(image_gray))
         messagebox.showinfo('Info', 'Parallel images generated in parallel_images/')
     

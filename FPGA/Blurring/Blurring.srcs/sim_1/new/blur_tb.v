@@ -1,60 +1,39 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 09.11.2018 10:50:20
-// Design Name: 
-// Module Name: blur_tb
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
-
-
 module blur_tb();
 
  reg clk, reset, done_in;
  reg [2:0] sel_module;
  reg[7:0] val;
- reg[7:0] red1, green1, blue1;
- reg[7:0] red2, green2, blue2;
- reg[7:0] red3, green3, blue3;
- reg[7:0] red4, green4, blue4;
- reg[7:0] red5, green5, blue5;
- reg[7:0] red6, green6, blue6;
- reg[7:0] red7, green7, blue7;
- reg[7:0] red8, green8, blue8;
- reg[7:0] red9, green9, blue9;
- reg[7:0] red10, green10, blue10;
+ reg[7:0] red1;
+ reg[7:0] red2;
+ reg[7:0] red3;
+ reg[7:0] red4;
+ reg[7:0] red5;
+ reg[7:0] red6;
+ reg[7:0] red7;
+ reg[7:0] red8;
+ reg[7:0] red9;
+ reg[7:0] red10;
  
  wire done_out;
- wire[7:0] red_o, green_o, blue_o;
+ wire[7:0] red_o;
 
-blur tb( clk, reset, sel_module,red1, green1, blue1,red2, green2, blue2,red3, green3, blue3,red4, green4, blue4,red5, green5, blue5,red6, green6, blue6,red7, green7, blue7,red8, green8, blue8, red9, green9, blue9, red10, green10, blue10,     // input signlas
+blur tb( clk, reset, sel_module,red1,red2,red3,red4,red5,red6,red7,red8,red9, red10,     // input signlas
                      done_in, done_out,       // output signals for tgb2gray
                 //     val,                           // brightness values
-                     red_o, green_o, blue_o);
+                     red_o);
                      
                      
-`define read_fileName1 "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\Python\\parallel_images\\road_gray.bmp"
-`define read_fileName2 "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\Python\\parallel_images\\left.bmp"
-`define read_fileName3 "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\Python\\parallel_images\\right.bmp"
-`define read_fileName4 "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\Python\\parallel_images\\up.bmp"
-`define read_fileName5 "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\Python\\parallel_images\\down.bmp"
-`define read_fileName6 "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\Python\\parallel_images\\leftup.bmp"
-`define read_fileName7 "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\Python\\parallel_images\\leftdown.bmp"
-`define read_fileName8 "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\Python\\parallel_images\\rightup.bmp"
-`define read_fileName9 "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\Python\\parallel_images\\rightdown.bmp"
-`define read_filename10 "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\FPGA\\bmp\\output\\road_sobel.bmp"
+`define read_fileName1 "D:\\Lenix\\lane_detection\\Python\\parallel_images\\road_gray.bmp"
+`define read_fileName2 "D:\\Lenix\\lane_detection\\Python\\parallel_images\\left.bmp"
+`define read_fileName3 "D:\\Lenix\\lane_detection\\Python\\parallel_images\\right.bmp"
+`define read_fileName4 "D:\\Lenix\\lane_detection\\Python\\parallel_images\\up.bmp"
+`define read_fileName5 "D:\\Lenix\\lane_detection\\Python\\parallel_images\\\\down.bmp"
+`define read_fileName6 "D:\\Lenix\\lane_detection\\Python\\parallel_images\\leftup.bmp"
+`define read_fileName7 "D:\\Lenix\\lane_detection\\Python\\parallel_images\\leftdown.bmp"
+`define read_fileName8 "D:\\Lenix\\lane_detection\\Python\\parallel_images\\rightup.bmp"
+`define read_fileName9 "D:\\Lenix\\lane_detection\\Python\\parallel_images\\rightdown.bmp"
+`define read_filename10 "D:\\Lenix\\lane_detection\\FPGA\\bmp\\output\\road_sobel.bmp"
 
  localparam ARRAY_LEN = 1000*1024;
  
@@ -132,15 +111,6 @@ blur tb( clk, reset, sel_module,red1, green1, blue1,red2, green2, blue2,red3, gr
              $display("width - %d; height - %d",width, height );
          
              bitcount = {data1[29],data1[28]};
-         
-             if(bitcount != 24) begin
-                 $display("Error: Please check the image file. It may be corrupted");
-             end
-         
-             if(width%4)begin
-                 $display("width is not suitable");
-                 $finish;
-             end
  //            for(i = start_pos; i<size;i = i+1)begin
  //                $display("%h", data[i]);
  //            end
@@ -152,7 +122,7 @@ blur tb( clk, reset, sel_module,red1, green1, blue1,red2, green2, blue2,red3, gr
  
 
  integer i, j;
- localparam RESULT_ARRAY_LEN = 5000*1024;
+ localparam RESULT_ARRAY_LEN = 1000*1024;
  
  reg[7:0] result[0:RESULT_ARRAY_LEN - 1];
  
@@ -163,10 +133,8 @@ blur tb( clk, reset, sel_module,red1, green1, blue1,red2, green2, blue2,red3, gr
             j <= 8'd0;
         end else begin
             if(done_out) begin
-                result[j] <= blue_o;
-                result[j+1] <= green_o;
-                result[j+2] <= red_o;
-                j <= j+3;
+                result[j] <= red_o;
+                j <= j+1;
                 //$display("%d, %d", gray, result[j]);
             end
         end
@@ -177,10 +145,8 @@ blur tb( clk, reset, sel_module,red1, green1, blue1,red2, green2, blue2,red3, gr
             if(done_out) begin
                 //$display("done_out, %d", done_out);
                 //$display("something");
-                result[j] <= blue_o;
-                result[j+1] <= green_o;
-                result[j+2] <= red_o;
-                j <= j+3;
+                result[j] <= red_o;
+                j <= j+1;
 //                $display("j-%d", j);
 //                $display("blue-%d;green-%d;red-%d;", result[j],result[j+1],result[j+2]);
             end
@@ -192,7 +158,7 @@ blur tb( clk, reset, sel_module,red1, green1, blue1,red2, green2, blue2,red3, gr
  
 //Image Write Start
  
- `define write_filename "C:\\Users\\Admin\\OneDrive\\Documents\\GithubRepos\\lane_detection\\FPGA\\bmp\\output\\road_sobel_binarized.bmp"
+ `define write_filename "D:\\Lenix\\lane_detection\\FPGA\\bmp\\output\\road_sobel_binarized.bmp"
  
 task writeBMP;
 integer fileID, k;
@@ -248,58 +214,23 @@ initial begin
     val = 50;
     
     red1 = 8'd0;
-    green1 = 8'd0;
-    blue1 = 8'd0;
     
     readBMP;
     
     #10;
     reset = 0;
  
-    for(i = start_pos; i < size; i = i+3)begin
-        red1 = data1[i+2];
-        green1 = data1[i+1];
-        blue1 = data1[i];
-        
-        red2 = data2[i+2];
-        green2 = data2[i+1];
-        blue2 = data2[i];
-        
-        red3 = data3[i+2];
-        green3 = data3[i+1];
-        blue3 = data3[i];
-        
-        red4 = data4[i+2];
-        green4 = data4[i+1];
-        blue4 = data4[i];
-        
-        red5 = data5[i+2];
-        green5 = data5[i+1];
-        blue5 = data5[i];
-        
-        red6 = data6[i+2];
-        green6 = data6[i+1];
-        blue6 = data6[i];
-        
-        red7 = data7[i+2];
-        green7 = data7[i+1];
-        blue7 = data7[i];
-        
-        red8 = data8[i+2];
-        green8 = data8[i+1];
-        blue8 = data8[i];
-        
-        
-        red9 = data9[i+2];
-        green9 = data9[i+1];
-        blue9 = data9[i];
-        
-        
-        red10 = data10[i+2];
-        green10 = data10[i+1];
-        blue10 = data10[i];
-        
-        
+    for(i = start_pos; i < size; i = i+1)begin
+        red1 = data1[i];
+        red2 = data2[i];        
+        red3 = data3[i];
+        red4 = data4[i];
+        red5 = data5[i];        
+        red6 = data6[i];
+        red7 = data7[i];
+        red8 = data8[i];
+        red9 = data9[i];
+        red10 = data10[i];
         #10;
         done_in = 1;
     end

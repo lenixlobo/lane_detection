@@ -1,6 +1,6 @@
 Vivado Simulator v2022.2
 Copyright 1986-1999, 2001-2022 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot blur_tb_behav xil_defaultlib.blur_tb xil_defaultlib.glbl -log elaborate.log 
+Running: D:/Vivado22/Vivado/2022.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot blur_tb_behav xil_defaultlib.blur_tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
@@ -10,15 +10,15 @@ Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.blur
 Compiling module xil_defaultlib.blur_tb
-WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 95. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
-WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 98. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
-WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 101. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
-WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 104. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
-WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 107. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
-WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 110. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
-WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 113. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
-WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 116. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
-WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 119. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
-WARNING: [XSIM 43-3373] "C:/Users/Admin/OneDrive/Documents/GithubRepos/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 122. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "D:/Lenix/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 74. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "D:/Lenix/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 77. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "D:/Lenix/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 80. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "D:/Lenix/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 83. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "D:/Lenix/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 86. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "D:/Lenix/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 89. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "D:/Lenix/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 92. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "D:/Lenix/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 95. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "D:/Lenix/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 98. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
+WARNING: [XSIM 43-3373] "D:/Lenix/lane_detection/FPGA/Blurring/Blurring.srcs/sim_1/new/blur_tb.v" Line 101. System function $fread is used as system task. This system function should have a LHS e.g. x=$fread().
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot blur_tb_behav
